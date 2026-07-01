@@ -16,6 +16,7 @@
             --text-muted: #c5a3e8;
             --badge-hot: #ff4757;
             --badge-pro: #ffa500;
+            --success: #00c853;
         }
 
         * {
@@ -45,62 +46,41 @@
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
             border: 1px solid #2f3e46;
-            margin-bottom: 60px; /* Space so mobile content isn't blocked by the button */
+            margin-bottom: 60px;
         }
 
-        /* Profile Header */
-        .profile-box {
-            background-color: var(--primary);
-            padding: 15px;
-            border-radius: 12px;
-            text-align: left;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .profile-avatar {
-            background: rgba(255,255,255,0.2);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .profile-info h3 {
-            font-size: 1.1rem;
-            color: #fff;
-        }
-
-        .profile-info p {
-            font-size: 0.85rem;
-            color: #e0aaff;
-        }
-
-        .header {
+        /* NEW CUSTOM TOP BRANDING HEADER */
+        .brand-header {
+            background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+            padding: 25px 20px;
+            border-radius: 15px;
             text-align: center;
             margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(157, 78, 221, 0.3);
         }
 
-        .logo {
-            font-size: 2.3rem;
-            font-weight: 800;
-            color: #fff;
-            letter-spacing: -0.5px;
+        .brand-logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-        
-        .logo span {
-            color: var(--primary);
+
+        .brand-subtitle {
+            font-size: 0.95rem;
+            color: #e0aaff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
         }
 
         .tagline {
-            font-size: 1rem;
-            color: #95a5a6;
-            margin-top: 5px;
+            text-align: center;
+            font-size: 1.05rem;
+            color: #a0aab2;
+            margin-bottom: 25px;
         }
 
         /* Earning Features Section */
@@ -155,11 +135,59 @@
         .badge-hot { background-color: var(--badge-hot); color: white; }
         .badge-pro { background-color: var(--badge-pro); color: black; }
 
+        /* NEW LIVE PAYMENT PROOF SECTION */
+        .proof-container {
+            margin-bottom: 30px;
+        }
+
+        .proof-card {
+            background: var(--card-inner);
+            border: 1px solid rgba(0, 200, 83, 0.2);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .proof-details {
+            text-align: left;
+        }
+
+        .proof-user {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #ffffff;
+        }
+
+        .proof-date {
+            font-size: 0.8rem;
+            color: #7289da;
+        }
+
+        .proof-status {
+            color: var(--success);
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 2px;
+        }
+
+        .proof-amount {
+            color: var(--success);
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: rgba(0, 200, 83, 0.1);
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+
         /* Action Buttons */
         .action-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            margin-bottom: 20px;
         }
 
         .btn {
@@ -167,10 +195,10 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 16px;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 700;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 800;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -182,43 +210,42 @@
         .btn-register {
             background-color: var(--primary);
             color: #ffffff;
-            box-shadow: 0 4px 15px rgba(157, 78, 221, 0.4);
+            box-shadow: 0 6px 20px rgba(157, 78, 221, 0.4);
         }
 
         .btn-register:hover {
             background-color: var(--primary-hover);
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(157, 78, 221, 0.6);
         }
 
-        /* FLOATING WHATSAPP BUTTON (Fixed on the right side) */
+        /* FIXED FLOATING WHATSAPP BUTTON WITH SVG ICON FIXED */
         .btn-whatsapp-float {
             position: fixed;
             bottom: 25px;
             right: 25px;
             background-color: var(--whatsapp);
-            color: #ffffff;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease;
-            z-index: 9999; /* Keeps it on top of everything */
-            text-decoration: none;
+            z-index: 9999;
         }
 
         .btn-whatsapp-float:hover {
-            transform: translateY(-5px) scale(1.08);
+            transform: translateY(-5px) scale(1.1);
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
             background-color: #20ba5a;
         }
 
         .btn-whatsapp-float svg {
             fill: #ffffff;
-            width: 32px;
-            height: 32px;
+            width: 35px;
+            height: 35px;
         }
 
         .footer {
@@ -232,26 +259,18 @@
 <body>
 
     <div class="container">
-        <!-- Verification Banner -->
-        <div class="profile-box">
-            <div class="profile-avatar">EQ</div>
-            <div class="profile-info">
-                <h3>Wiz25</h3>
-                <p>Verified Premium Member Invitation</p>
-            </div>
+        <!-- New Top Custom Header Section -->
+        <div class="brand-header">
+            <div class="brand-logo">EARNQASH</div>
+            <div class="brand-subtitle">Official Premium Platform</div>
         </div>
 
-        <!-- Header -->
-        <div class="header">
-            <div class="logo">EARN <span>QASH</span></div>
-            <p class="tagline">The ultimate all-in-one digital income generator.</p>
-        </div>
+        <p class="tagline">The ultimate all-in-one digital income generator.</p>
 
         <!-- Ways to Earn Section -->
         <div class="section-title">Ways to Earn Money</div>
         
         <div class="features-list">
-            
             <div class="feature-item">
                 <div class="feature-header">
                     <span>Welcome Bonus</span>
@@ -292,19 +311,11 @@
                 <div class="feature-header">Team Affiliate Network</div>
                 <div class="feature-desc">Build your network by claiming downlines. Earn high-tier direct commissions when you invite others to join your team.</div>
             </div>
-
         </div>
 
-        <!-- Main Register Button -->
-        <div class="action-container">
-            <a href="https://earn-qash.com" target="_blank" class="btn btn-register">
-                Register An Account
-            </a>
-        </div>
-
-        <p class="footer">&copy; 2026 Earnqash Network. All rights reserved.</p>
-    </div>
-
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me" target="_blank" class="btn-whatsapp-float" title="Contact on WhatsApp">
-        <svg viewBox="0 0 24 24">
+        <!-- New Verified Payment Proof Showcase -->
+        <div class="section-title">Live Withdrawal Proofs</div>
+        <div class="proof-container">
+            <div class="proof-card">
+                <div class="proof-details">
+                    <div class="proof-user">User: @Wiz25</div>
