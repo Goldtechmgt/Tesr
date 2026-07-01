@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnqash - Premium Earning Dashboard</title>
+    <style>
+        :root {
+            --primary: #9d4edd; /* Purple theme matched to your dashboard */
+            --primary-hover: #7b2cbf;
+            --whatsapp: #25d366;
+            --whatsapp-hover: #20ba5a;
+            --dark: #0b0c10;
+            --card-bg: #1f2833;
+            --card-inner: #151a22;
+            --text: #ffffff;
+            --text-muted: #c5a3e8;
+            --badge-hot: #ff4757;
+            --badge-pro: #ffa500;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            border: 1px solid #2f3e46;
+        }
+
+        /* Profile Header Header */
+        .profile-box {
+            background-color: var(--primary);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: left;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile-avatar {
+            background: rgba(255,255,255,0.2);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .profile-info h3 {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .profile-info p {
+            font-size: 0.85rem;
+            color: #e0aaff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #95a5a6;
+            margin-top: 5px;
+        }
+
+        /* Earning Features Section */
+        .section-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #ffb703;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #2f3e46;
+            padding-bottom: 5px;
+        }
+
+        .features-list {
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            background: var(--card-inner);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            border-left: 4px solid var(--primary);
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .feature-desc {
+            font-size: 0.88rem;
+            color: #a0aab2;
+        }
+
+        /* Badges */
+        .badge {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge-hot { background-color: var(--badge-hot); color: white; }
+        .badge-pro { background-color: var(--badge-pro); color: black; }
+
+        /* Action Buttons */
+        .action-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-register {
+            background-color: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(157, 78, 221, 0.4);
+        }
+
+        .btn-register:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-whatsapp {
+            background-color: transparent;
+            color: var(--whatsapp);
+            border: 2px solid var(--whatsapp);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: rgba(37, 211, 102, 0.1);
+        }
+
+        .btn svg {
+            margin-right: 10px;
+            fill: currentColor;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #6272a4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Verification Banner Linked to your Account -->
+        <div class="profile-box">
+            <div class="profile-avatar">EQ</div>
+            <div class="profile-info">
+                <h3>Wiz25</h3>
+                <p>Verified Premium Member Invitation</p>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">EARN <span>QASH</span></div>
+            <p class="tagline">The ultimate all-in-one digital income generator.</p>
+        </div>
+
+        <!-- Ways to Earn Section -->
+        <div class="section-title">Ways to Earn Money</div>
+        
+        <div class="features-list">
+            
+            <div class="feature-item">
+                <div class="feature-header">
+                    <span>Welcome Bonus</span>
+                    <span class="badge badge-hot">Hot</span>
+                </div>
+                <div class="feature-desc">Get rewarded instantly with an instant cash bonus credited right to your balance just for activating your account.</div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-header">Daily Bonuses</div>
+                <div class="feature-desc">Log into your dashboard every single day to claim consistency rewards and build steady passive growth.</div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-header">Ads Promotion &amp; Trivia</div>
+                <div class="feature-desc">Earn effortlessly by viewing commercial advertisements, promotional content, or answering simple trivia questions.</div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-header">TikTok &amp; YouTube Engagement</div>
+                <div class="feature-desc">Get paid for interacting with social media videos. Simply watch, like, or complete easy social tasks.</div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-header">Lucky Spins</div>
+                <div class="feature-desc">Try your luck with regular dynamic wheel spins to hit major jackpots and multiplier cash payouts.</div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-header">
+                    <span>Forex &amp; Crypto Markets</span>
+                    <span class="badge badge-pro">Pro</span>
+                </div>
+                <div class="feature-desc">Access premier financial asset tracking and market insights to multiply your wealth strategically.</div>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-header">Team Affiliate Network</div>
+                <div class="feature-desc">Build your network by claiming downlines. Earn high-tier direct commissions when you invite others to join your team.</div>
+            </div>
+
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-container">
+            <a href="https://earn-qash.com" target="_blank" class="btn btn-register">
+                Register An Account
+            </a>
+
+            <a href="https://wa.me" target="_blank" class="btn btn-whatsapp">
+                <svg width="20" height="20" viewBox="0 0 24 24">
