@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Earnqash - Premium Earning Dashboard</title>
     <style>
         :root {
-            --primary: #9d4edd; /* Dashboard Purple */
+            --primary: #9d4edd; 
             --primary-hover: #7b2cbf;
             --whatsapp: #25d366;
             --dark: #0b0c10;
@@ -29,46 +29,43 @@
         body {
             background-color: var(--dark);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.5;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 15px;
+            padding-bottom: 100px; /* Crucial: leaves scrolling space at bottom */
         }
 
         .container {
             max-width: 550px;
             width: 100%;
             background: var(--card-bg);
-            padding: 35px 25px;
+            padding: 25px 20px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
             border: 1px solid #2f3e46;
-            margin-bottom: 60px;
         }
 
-        /* NEW CUSTOM TOP BRANDING HEADER */
         .brand-header {
             background: linear-gradient(135deg, #7b2cbf, #9d4edd);
-            padding: 25px 20px;
+            padding: 20px 15px;
             border-radius: 15px;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             box-shadow: 0 8px 20px rgba(157, 78, 221, 0.3);
         }
 
         .brand-logo {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 900;
             color: #ffffff;
             letter-spacing: 1px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .brand-subtitle {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: #e0aaff;
             font-weight: 600;
             text-transform: uppercase;
@@ -78,31 +75,30 @@
 
         .tagline {
             text-align: center;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: #a0aab2;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        /* Earning Features Section */
         .section-title {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #ffb703;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-bottom: 1px solid #2f3e46;
             padding-bottom: 5px;
         }
 
         .features-list {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .feature-item {
             background: var(--card-inner);
-            padding: 15px;
+            padding: 12px 15px;
             border-radius: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             flex-direction: column;
             text-align: left;
@@ -114,19 +110,18 @@
             align-items: center;
             justify-content: space-between;
             font-weight: 700;
-            font-size: 1.05rem;
+            font-size: 1rem;
             margin-bottom: 4px;
         }
 
         .feature-desc {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: #a0aab2;
         }
 
-        /* Badges */
         .badge {
-            font-size: 0.75rem;
-            padding: 2px 8px;
+            font-size: 0.7rem;
+            padding: 1px 6px;
             border-radius: 20px;
             font-weight: bold;
             text-transform: uppercase;
@@ -135,17 +130,16 @@
         .badge-hot { background-color: var(--badge-hot); color: white; }
         .badge-pro { background-color: var(--badge-pro); color: black; }
 
-        /* NEW LIVE PAYMENT PROOF SECTION */
         .proof-container {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .proof-card {
             background: var(--card-inner);
-            border: 1px solid rgba(0, 200, 83, 0.2);
-            padding: 15px;
+            border: 1px solid rgba(0, 200, 83, 0.15);
+            padding: 12px 15px;
             border-radius: 12px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -157,37 +151,35 @@
 
         .proof-user {
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #ffffff;
         }
 
         .proof-date {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #7289da;
         }
 
         .proof-status {
             color: var(--success);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 4px;
             margin-top: 2px;
         }
 
         .proof-amount {
             color: var(--success);
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 800;
             background: rgba(0, 200, 83, 0.1);
-            padding: 6px 12px;
-            border-radius: 8px;
+            padding: 4px 10px;
+            border-radius: 6px;
         }
 
         /* Action Buttons */
         .action-container {
-            margin-bottom: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         .btn {
@@ -195,63 +187,57 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 18px;
+            padding: 16px;
             border-radius: 12px;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 800;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
-        .btn:active {
-            transform: scale(0.98);
-        }
-
         .btn-register {
             background-color: var(--primary);
             color: #ffffff;
-            box-shadow: 0 6px 20px rgba(157, 78, 221, 0.4);
+            box-shadow: 0 4px 15px rgba(157, 78, 221, 0.4);
         }
 
         .btn-register:hover {
             background-color: var(--primary-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(157, 78, 221, 0.6);
         }
 
-        /* FIXED FLOATING WHATSAPP BUTTON WITH SVG ICON FIXED */
+        /* FIXED INTERACTIVE FLOATING WHATSAPP SYSTEM */
         .btn-whatsapp-float {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
+            bottom: 20px;
+            right: 20px;
             background-color: var(--whatsapp);
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
             transition: all 0.3s ease;
-            z-index: 9999;
+            z-index: 99999 !important; /* Forces layout to float on very top layer */
         }
 
         .btn-whatsapp-float:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+            transform: scale(1.1) translateY(-3px);
             background-color: #20ba5a;
         }
 
         .btn-whatsapp-float svg {
             fill: #ffffff;
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
         }
 
         .footer {
             text-align: center;
-            margin-top: 30px;
-            font-size: 0.85rem;
+            margin-top: 25px;
+            font-size: 0.8rem;
             color: #6272a4;
         }
     </style>
@@ -259,7 +245,6 @@
 <body>
 
     <div class="container">
-        <!-- New Top Custom Header Section -->
         <div class="brand-header">
             <div class="brand-logo">EARNQASH</div>
             <div class="brand-subtitle">Official Premium Platform</div>
@@ -267,7 +252,6 @@
 
         <p class="tagline">The ultimate all-in-one digital income generator.</p>
 
-        <!-- Ways to Earn Section -->
         <div class="section-title">Ways to Earn Money</div>
         
         <div class="features-list">
@@ -313,9 +297,18 @@
             </div>
         </div>
 
-        <!-- New Verified Payment Proof Showcase -->
         <div class="section-title">Live Withdrawal Proofs</div>
         <div class="proof-container">
             <div class="proof-card">
                 <div class="proof-details">
                     <div class="proof-user">User: @Wiz25</div>
+                    <div class="proof-date">Just now</div>
+                    <div class="proof-status">● Confirmed via Mobile Money</div>
+                </div>
+                <div class="proof-amount">+$140.00</div>
+            </div>
+            
+            <div class="proof-card">
+                <div class="proof-details">
+                    <div class="proof-user">User: @Alpha_Earns</div>
+                    <div class="proof-date">5 mins ago</div>
