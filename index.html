@@ -9,7 +9,6 @@
             --primary: #9d4edd; /* Purple theme matched to your dashboard */
             --primary-hover: #7b2cbf;
             --whatsapp: #25d366;
-            --whatsapp-hover: #20ba5a;
             --dark: #0b0c10;
             --card-bg: #1f2833;
             --card-inner: #151a22;
@@ -48,7 +47,7 @@
             border: 1px solid #2f3e46;
         }
 
-        /* Profile Header Header */
+        /* Profile Header */
         .profile-box {
             background-color: var(--primary);
             padding: 15px;
@@ -172,7 +171,7 @@
             font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: all 0.3s ease;
         }
 
         .btn:active {
@@ -187,8 +186,10 @@
 
         .btn-register:hover {
             background-color: var(--primary-hover);
+            transform: translateY(-2px);
         }
 
+        /* NEW HOVER EFFECT: Filled green background with glow */
         .btn-whatsapp {
             background-color: transparent;
             color: var(--whatsapp);
@@ -196,7 +197,10 @@
         }
 
         .btn-whatsapp:hover {
-            background-color: rgba(37, 211, 102, 0.1);
+            background-color: var(--whatsapp);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
         }
 
         .btn svg {
