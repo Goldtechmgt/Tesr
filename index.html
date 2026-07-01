@@ -45,6 +45,7 @@
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
             border: 1px solid #2f3e46;
+            margin-bottom: 50px; /* Leave room for floating button on mobile */
         }
 
         /* Profile Header */
@@ -189,23 +190,35 @@
             transform: translateY(-2px);
         }
 
-        /* NEW HOVER EFFECT: Filled green background with glow */
-        .btn-whatsapp {
-            background-color: transparent;
-            color: var(--whatsapp);
-            border: 2px solid var(--whatsapp);
-        }
-
-        .btn-whatsapp:hover {
+        /* FLOATING WHATSAPP BUTTON SYSTEM */
+        .btn-whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
             background-color: var(--whatsapp);
             color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
         }
 
-        .btn svg {
-            margin-right: 10px;
-            fill: currentColor;
+        .btn-whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+            background-color: #20ba5a;
+        }
+
+        .btn-whatsapp-float svg {
+            fill: #ffffff;
+            width: 32px;
+            height: 32px;
         }
 
         .footer {
@@ -282,11 +295,16 @@
 
         </div>
 
-        <!-- Action Buttons -->
+        <!-- Main Register Button -->
         <div class="action-container">
             <a href="https://earn-qash.com" target="_blank" class="btn btn-register">
                 Register An Account
             </a>
+        </div>
 
-            <a href="https://wa.me" target="_blank" class="btn btn-whatsapp">
-                <svg width="20" height="20" viewBox="0 0 24 24">
+        <p class="footer">&copy; 2026 Earnqash Network. All rights reserved.</p>
+    </div>
+
+    <!-- Floating Right-Aligned WhatsApp Button -->
+    <a href="https://wa.me" target="_blank" class="btn btn-whatsapp-float" title="Contact on WhatsApp">
+        <svg viewBox="0 0 24 24">
